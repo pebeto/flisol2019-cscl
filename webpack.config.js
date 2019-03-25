@@ -2,6 +2,7 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -19,7 +20,13 @@ module.exports = {
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new TerserPlugin({
+          parallel: true,
+          terserOptions: {
+              ecma: 6,
+          },
+      })
   ],
   module: {
     rules: [{

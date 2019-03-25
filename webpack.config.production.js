@@ -1,4 +1,4 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var TerserPlugin = require('terser-webpack-plugin');
 /* eslint-disable */
 
 var path = require("path");
@@ -19,7 +19,13 @@ module.exports = {
       "process.env": {
         NODE_ENV: JSON.stringify("production")
       }
-    })
+    }),
+      new TerserPlugin({
+          parallel: true,
+          terserOptions: {
+              ecma: 6,
+          },
+      })
   ],
 
   module: {
@@ -85,11 +91,5 @@ module.exports = {
         ]
       }
     ]
-  },
-
-  optimization: {
-    minimize: true,
-
-    minimizer: [new UglifyJsPlugin()]
   }
 };
