@@ -82,6 +82,11 @@ const images = {
     pepeUniverse: require('./assets/pepeUniverse.png'),
     gaben: require('./assets/gaben.jpg'),
     protonsteam: require('./assets/protonsteam.jpg'),
+    pepeSad: require('./assets/pepeSad.png'),
+    pepeSuicide: require('./assets/pepeSuicide.png'),
+    linuxMasterRace: require('./assets/linuxMasterRace.png'),
+    minecraftflisol: require('./assets/mineflisol.png'),
+    orange: require('./assets/orange.gif'),
     distrolist: require('./assets/distrolist.png')
 };
 
@@ -391,11 +396,43 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['fade']} bgColor='primary'>
+            <img src={ images.pepeSad } width={700}/>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor='primary'>
+            <img src={ images.pepeSuicide } width={700}/>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor='primary'>
             <img src={ images.gaben } width={600}/>
         </Slide>
 
         <Slide transition={['fade']} bgColor='primary'>
             <img src={ images.protonsteam } width={600}/>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor='primary'>
+            <img src={ images.linuxMasterRace } width={700}/>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor='primary'>
+            <img src={ images.orange } width={700}/>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor='primary'>
+            <img src={ images.minecraftflisol } width={700}/>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor='primary'>
+            <Heading size={6} textColor='tertiary' caps>
+                Entonces...
+            </Heading>
+        </Slide>
+
+        <Slide transition={['fade']} bgColor='secondary'>
+            <Heading size={6} textColor='primary' caps>
+                ¿Es Linux para mi?
+            </Heading>
         </Slide>
 
       </Deck>
