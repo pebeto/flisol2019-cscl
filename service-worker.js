@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/flisol2019-cscl/precache-manifest.30f03bc49c0c7fc697fe4f38ba27b5e6.js"
+  "/flisol2019-cscl/precache-manifest.9673335ed5dd09b4d70ef76f7c2a9028.js"
 );
 
 workbox.clientsClaim();
